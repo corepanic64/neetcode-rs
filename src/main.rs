@@ -8,7 +8,7 @@ fn main() {
 
 fn has_duplicate(words: Vec<&str>) -> bool {
     let mut hm: HashMap<String, usize> = HashMap::new();
-    for (i, v) in words.iter().enumerate() {
+    for (_, v) in words.iter().enumerate() {
         let hm_word = hm.contains_key(*v);
         if hm_word {
             return true;
